@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 430" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1F3A5F"></path>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="900" height="430" fill="#FAF9F7"></rect>
+
+  <!-- Top row -->
+  <g>
+    <rect x="70" y="60" width="160" height="70" rx="6" fill="#FFFFFF" stroke="#E3E1DC"></rect>
+    <text x="150" y="100" text-anchor="middle" font-size="14" fill="#1C2321">AI use cases</text>
+
+    <rect x="270" y="60" width="160" height="70" rx="6" fill="#FFFFFF" stroke="#E3E1DC"></rect>
+    <text x="350" y="93" text-anchor="middle" font-size="14" fill="#1C2321">Intake &amp;</text>
+    <text x="350" y="111" text-anchor="middle" font-size="14" fill="#1C2321">triage</text>
+
+    <rect x="470" y="60" width="160" height="70" rx="6" fill="#E8EEF4" stroke="#C7D6E4"></rect>
+    <text x="550" y="93" text-anchor="middle" font-size="14" fill="#1F3A5F">Risk /</text>
+    <text x="550" y="111" text-anchor="middle" font-size="14" fill="#1F3A5F">governance</text>
+
+    <rect x="670" y="60" width="160" height="70" rx="6" fill="#FFFFFF" stroke="#E3E1DC"></rect>
+    <text x="750" y="100" text-anchor="middle" font-size="14" fill="#1C2321">Prioritization</text>
+  </g>
+
+  <!-- Bottom row -->
+  <g>
+    <rect x="70" y="300" width="160" height="70" rx="6" fill="#FFFFFF" stroke="#E3E1DC"></rect>
+    <text x="150" y="333" text-anchor="middle" font-size="14" fill="#1C2321">Feedback</text>
+    <text x="150" y="351" text-anchor="middle" font-size="14" fill="#1C2321">loop</text>
+
+    <rect x="270" y="300" width="160" height="70" rx="6" fill="#FFFFFF" stroke="#E3E1DC"></rect>
+    <text x="350" y="333" text-anchor="middle" font-size="14" fill="#1C2321">Measurement &amp;</text>
+    <text x="350" y="351" text-anchor="middle" font-size="14" fill="#1C2321">reporting</text>
+
+    <rect x="470" y="300" width="160" height="70" rx="6" fill="#FFFFFF" stroke="#E3E1DC"></rect>
+    <text x="550" y="333" text-anchor="middle" font-size="14" fill="#1C2321">Adoption</text>
+    <text x="550" y="351" text-anchor="middle" font-size="14" fill="#1C2321">support</text>
+
+    <rect x="670" y="300" width="160" height="70" rx="6" fill="#FFFFFF" stroke="#E3E1DC"></rect>
+    <text x="750" y="333" text-anchor="middle" font-size="14" fill="#1C2321">Enablement &amp;</text>
+    <text x="750" y="351" text-anchor="middle" font-size="14" fill="#1C2321">training</text>
+  </g>
+
+  <!-- Top row arrows -->
+  <line x1="230" y1="95" x2="266" y2="95" stroke="#1F3A5F" stroke-width="1.75" marker-end="url(#arrow)"></line>
+  <line x1="430" y1="95" x2="466" y2="95" stroke="#1F3A5F" stroke-width="1.75" marker-end="url(#arrow)"></line>
+  <line x1="630" y1="95" x2="666" y2="95" stroke="#1F3A5F" stroke-width="1.75" marker-end="url(#arrow)"></line>
+
+  <!-- Right side down -->
+  <line x1="750" y1="130" x2="750" y2="296" stroke="#1F3A5F" stroke-width="1.75" marker-end="url(#arrow)"></line>
+
+  <!-- Bottom row arrows (right to left) -->
+  <line x1="666" y1="335" x2="630" y2="335" stroke="#1F3A5F" stroke-width="1.75" marker-end="url(#arrow)"></line>
+  <line x1="466" y1="335" x2="430" y2="335" stroke="#1F3A5F" stroke-width="1.75" marker-end="url(#arrow)"></line>
+  <line x1="266" y1="335" x2="230" y2="335" stroke="#1F3A5F" stroke-width="1.75" marker-end="url(#arrow)"></line>
+
+  <!-- Left side up, closes the loop -->
+  <line x1="150" y1="296" x2="150" y2="134" stroke="#1F3A5F" stroke-width="1.75" marker-end="url(#arrow)"></line>
+
+  <text x="450" y="410" text-anchor="middle" font-size="12.5" fill="#6B7280">Enterprise AI enablement operating system — each stage hands off through a defined artifact, not a conversation</text>
+</svg>
