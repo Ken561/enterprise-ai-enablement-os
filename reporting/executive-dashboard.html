@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>AI Enablement — Executive Dashboard (Portfolio Sample)</title>
+<style>
+  :root {
+    --bg: #FAF9F7;
+    --card: #FFFFFF;
+    --border: #E3E1DC;
+    --ink: #1C2321;
+    --muted: #6B7280;
+    --accent: #1F3A5F;
+    --accent-soft: #E8EEF4;
+    --good: #2E6B4F;
+    --warn: #A9782E;
+    --risk: #A2453B;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+  }
+  .page {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 48px 32px 80px;
+  }
+  .notice {
+    background: #FFF7E8;
+    border: 1px solid #EBD9AE;
+    color: #7A5B1E;
+    font-size: 13px;
+    padding: 10px 16px;
+    border-radius: 4px;
+    margin-bottom: 40px;
+  }
+  header h1 {
+    font-family: Georgia, "Iowan Old Style", serif;
+    font-weight: 600;
+    font-size: 34px;
+    letter-spacing: -0.01em;
+    margin: 0 0 6px;
+    color: var(--ink);
+  }
+  header p {
+    color: var(--muted);
+    font-size: 15px;
+    margin: 0 0 40px;
+    max-width: 62ch;
+  }
+  .kpi-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-bottom: 40px;
+  }
+  .kpi {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 20px;
+  }
+  .kpi .label { font-size: 13px; color: var(--muted); margin-bottom: 10px; }
+  .kpi .value { font-size: 28px; font-weight: 600; letter-spacing: -0.02em; }
+  .kpi .delta { font-size: 13px; margin-top: 6px; }
+  .delta.up { color: var(--good); }
+  .delta.flat { color: var(--muted); }
+
+  .row {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 24px;
+  }
+  .card h2 {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0 0 4px;
+  }
+  .card .sub { font-size: 13px; color: var(--muted); margin: 0 0 20px; }
+
+  .bar-row { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+  .bar-row .name { width: 90px; font-size: 13px; color: var(--ink); flex-shrink: 0; }
+  .bar-track { flex: 1; background: #F0EFEC; border-radius: 3px; height: 10px; overflow: hidden; }
+  .bar-fill { height: 100%; border-radius: 3px; }
+  .bar-row .pct { width: 40px; text-align: right; font-size: 13px; color: var(--muted); }
+
+  table { width: 100%; border-collapse: collapse; font-size: 13.5px; }
+  th, td { text-align: left; padding: 10px 8px; border-bottom: 1px solid var(--border); }
+  th { color: var(--muted); font-weight: 500; }
+  .tag { display: inline-block; padding: 2px 8px; border-radius: 3px; font-size: 12px; }
+  .tag.low { background: #E9F3EC; color: var(--good); }
+  .tag.medium { background: #FBF1E0; color: var(--warn); }
+  .tag.high { background: #F6E7E5; color: var(--risk); }
+
+  ul.themes { margin: 0; padding-left: 18px; font-size: 14px; color: var(--ink); }
+  ul.themes li { margin-bottom: 10px; }
+
+  footer { margin-top: 32px; font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="notice">Portfolio sample. All figures on this page are fictional and included to illustrate report structure — not actual JPMorganChase data.</div>
+
+  <header>
+    <h1>Corporate Technology AI adoption</h1>
+    <p>Monthly executive view · Reporting period: sample month · Prepared for ED/MD and CIO/CTO review</p>
+  </header>
+
+  <div class="kpi-row">
+    <div class="kpi">
+      <div class="label">Active users</div>
+      <div class="value">4,120</div>
+      <div class="delta up">+18% vs. last month</div>
+    </div>
+    <div class="kpi">
+      <div class="label">Use cases in production</div>
+      <div class="value">27</div>
+      <div class="delta up">+3 vs. last month</div>
+    </div>
+    <div class="kpi">
+      <div class="label">LevelUp completion</div>
+      <div class="value">68%</div>
+      <div class="delta up">+6 pts vs. last month</div>
+    </div>
+    <div class="kpi">
+      <div class="label">Open governance items</div>
+      <div class="value">5</div>
+      <div class="delta flat">no change</div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="card">
+      <h2>Weekly active users, trailing 6 months</h2>
+      <p class="sub">Sample trend line — illustrates reporting format only</p>
+      <svg viewBox="0 0 560 180" width="100%" height="180" preserveAspectRatio="none">
+        <polyline points="0,150 90,138 180,120 270,110 360,80 450,55 550,30"
+          fill="none" stroke="#1F3A5F" stroke-width="2.5" />
+        <g fill="#1F3A5F">
+          <circle cx="0" cy="150" r="3.5"></circle>
+          <circle cx="90" cy="138" r="3.5"></circle>
+          <circle cx="180" cy="120" r="3.5"></circle>
+          <circle cx="270" cy="110" r="3.5"></circle>
+          <circle cx="360" cy="80" r="3.5"></circle>
+          <circle cx="450" cy="55" r="3.5"></circle>
+          <circle cx="550" cy="30" r="3.5"></circle>
+        </g>
+        <line x1="0" y1="170" x2="560" y2="170" stroke="#E3E1DC" stroke-width="1"></line>
+      </svg>
+    </div>
+
+    <div class="card">
+      <h2>Risk distribution</h2>
+      <p class="sub">Active use cases by risk tier</p>
+      <div class="bar-row">
+        <div class="name">Low</div>
+        <div class="bar-track"><div class="bar-fill" style="width:62%;background:#2E6B4F"></div></div>
+        <div class="pct">62%</div>
+      </div>
+      <div class="bar-row">
+        <div class="name">Medium</div>
+        <div class="bar-track"><div class="bar-fill" style="width:30%;background:#A9782E"></div></div>
+        <div class="pct">30%</div>
+      </div>
+      <div class="bar-row">
+        <div class="name">High</div>
+        <div class="bar-track"><div class="bar-fill" style="width:8%;background:#A2453B"></div></div>
+        <div class="pct">8%</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row" style="grid-template-columns: 1.4fr 1fr;">
+    <div class="card">
+      <h2>Use-case pipeline</h2>
+      <p class="sub">Sample entries — illustrative only</p>
+      <table>
+        <thead>
+          <tr><th>Use case</th><th>Stage</th><th>Risk</th><th>Sponsor</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Engineering issue capture assistant</td><td>In production</td><td><span class="tag low">Low</span></td><td>Engineering</td></tr>
+          <tr><td>Internal knowledge retrieval assistant</td><td>Pilot</td><td><span class="tag medium">Medium</span></td><td>Corporate Tech</td></tr>
+          <tr><td>Support triage assistant</td><td>Governance review</td><td><span class="tag high">High</span></td><td>Operations</td></tr>
+          <tr><td>Onboarding Q&amp;A assistant</td><td>Intake</td><td><span class="tag low">Low</span></td><td>HR</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="card">
+      <h2>Listening Post: top themes</h2>
+      <p class="sub">Summarized from 300+ structured submissions</p>
+      <ul class="themes">
+        <li>Requests for role-specific, worked examples rather than generic ones</li>
+        <li>Uncertainty about what data is safe to use in a prompt</li>
+        <li>Interest in agentic workflows once fundamentals feel solid</li>
+      </ul>
+    </div>
+  </div>
+
+  <footer>Executive dashboard mockup · Sample data for portfolio demonstration · See kpi-framework.md for metric definitions</footer>
+</div>
+</body>
+</html>
